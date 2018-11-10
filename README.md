@@ -1,3 +1,7 @@
+This is my web portfolio, I'm keeping the default React README text below.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
