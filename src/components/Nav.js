@@ -1,27 +1,6 @@
 import React from 'react';
 
-const links = [
-  {
-    path: '/',
-    name: 'Home'
-  },
-  {
-    path: '/aboutme',
-    name: 'About Me'
-  },
-  {
-    path: '/skills',
-    name: 'Skills'
-  },
-  {
-    path: '/development',
-    name: 'Development'
-  },
-  {
-    path: '/contact',
-    name: 'Contact'
-  }
-];
+import {links} from '../App';
 
 
 function Nav() {
