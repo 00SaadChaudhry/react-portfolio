@@ -1,8 +1,18 @@
 import React from 'react';
 
+import Image from './Image';
+import Description from './Description';
+
+import designSm from '../images/design_small.jpg';
+import designMd from '../images/design_medium.jpg';
+import designLg from '../images/design_large.jpg';
+
 function Development() {
   return (
-   <div className="Development">This is the Development Page</div>
+   <div className="Development">
+    <Image lgImg={designLg} mdImg={designMd} smImg={designSm} alt="html code" />
+    <Description />
+   </div>
   )
 }
 

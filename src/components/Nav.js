@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import {links} from '../App';
 
@@ -11,7 +12,7 @@ function Nav() {
           links.map(item => {
             return (
               <li key={item.name}>
-                <a href={item.path}>{item.name}</a>
+                <Link to={item.path}>{item.name}</Link>
               </li>
             )
           })

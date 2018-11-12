@@ -46,7 +46,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Head />
-          <Foot />
+          
           {
             links.map(item =>{
               return(
@@ -55,6 +55,7 @@ class App extends Component {
               )
             })
           }
+          <Foot />
         </div>
       </BrowserRouter>
     );
