@@ -11,7 +11,9 @@ function Development() {
   return (
    <div className="Development">
     <Image lgImg={designLg} mdImg={designMd} smImg={designSm} alt="html code" />
-    <Description />
+    <Description heading="Portfolio" 
+      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+     />
    </div>
   )
 }
