@@ -13,9 +13,7 @@ function Description(props) {
     <div className="Description">
       <h1>{props.heading}</h1>
       <ul>
-        {
-         techs[0].map(item => <li key={item}>{item}</li>)
-        }
+        {techs[props.list].map(item => <li key={item}>{item}</li>)}
       </ul>
       <p>{props.text}</p>
     </div>

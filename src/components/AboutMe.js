@@ -1,7 +1,7 @@
 import React from 'react';
 
+//Image component, contains picture element, and various image sizes
 import Image from './Image';
-
 import aboutSm from '../images/about_small.jpg';
 import aboutMd from '../images/about_medium.jpg';
 import aboutLg from '../images/about_large.jpg';
