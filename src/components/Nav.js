@@ -18,12 +18,12 @@ class Nav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicked:'not clicked'
+      toggle: true
     };
   }
   handleClick() {
-    this.setState.clicked = 'clicked';
-    console.log(this.state.clicked);
+    this.setState({toggle: !this.state.toggle});
+    console.log(this.state.toggle);
   }
   render() {
 
