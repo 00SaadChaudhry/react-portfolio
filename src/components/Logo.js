@@ -3,9 +3,9 @@ import React from 'react';
 function Logo() {
   return (
     <div className="Logo">
-      <p>
+      <h1>
         00Saad
-      </p>
+      </h1>
     </div>
   )
 }

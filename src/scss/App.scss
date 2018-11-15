@@ -2,6 +2,7 @@
 
 @import 'variables';
 
+// General Styling
 li {
   list-style: none;
 }
@@ -18,3 +19,58 @@ a {
   text-decoration: none;
   color: #000;
 }
+
+//top of page and navigation
+.Head {
+
+  ul {
+    padding-left: 0;
+  }
+
+  .Logo {
+    display: inline-block;
+    margin-right: 140px;
+    margin-left: 10px;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    padding: 10px 16px;
+    position: relative;
+    bottom: 10px;
+    
+    .menu {
+      transform: scale(2,1.5)
+    }
+  }
+
+  .nav-closed {
+    display: none;
+  }
+  
+  .nav-open {
+    display: block;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+//Homepage
+
+.Home {
+    position: relative;
+  p {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-size: 1.3em;
+    text-align: center;
+  }
+}
+
+
+
