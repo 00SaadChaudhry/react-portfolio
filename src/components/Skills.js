@@ -28,7 +28,7 @@ const skillsArr = [
 function Skills() {
   const showSkills = skillsArr.map(item => {
     return <Skill heading={item.heading} icon={['fab', item.icon]} 
-      text={item.text} key={item.heading} />
+      text={item.text} key={item.icon} id={item.icon} />
   })
 
   return (

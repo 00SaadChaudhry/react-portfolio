@@ -46,7 +46,6 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Head />
-          
           {
             links.map(item =>{
               return(
