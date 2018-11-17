@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo|Open+Sans');
 
 @import 'variables';
+@import 'mixins';
 
 
 // General Styling
@@ -9,9 +10,14 @@
   letter-spacing: 0.7px;
 }
 
+html, body {
+  height: 100%;
+}
+
 ul {
   padding-left: 0;
 }
+
 li {
   list-style: none;
 }
@@ -20,25 +26,12 @@ img {
   width: 100%;
 }
 
-button {
-  border: none;
-}
-
 p, h1, dd, dt {
   color: $black;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-p, a {
+p, a, dd, dt {
   font-family: 'Open Sans', sans-serif;
-}
-
-html, body {
-  height: 100%;
 }
 
 
@@ -71,8 +64,15 @@ html, body {
 
   .Logo {
     display: inline-block;
-    // margin-right: 50%;
     margin-left: 10px;
+
+    @include mQ(600px) {
+      margin-right: 20px;
+    }
+
+    @include mQ(700px) {
+      margin-right: 80px;
+    }
 
     h1 {
       margin-bottom: 0;
@@ -84,9 +84,14 @@ html, body {
   }
 
   button {
+    border: none;
     padding: 6px 12px;
     background-color: $darkGray;
     float: right;
+
+    @include mQ(600px) {
+      display: none;
+    }
     
     .menu {
       font-size: 1.6em;
@@ -98,8 +103,22 @@ html, body {
     clear: both;
   }
 
+  a {
+    color: $headTxt;
+    text-decoration: none;
+  }
+
   .nav-closed {
     display: none;
+    
+    @include mQ(600px) {
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        margin-right: 30px;
+      }
+    }
   }
   
   .nav-open {
@@ -107,9 +126,12 @@ html, body {
     padding-left: 0;
     text-align: center;
 
-    a {
-      color: $headTxt;
+    @include mQ(600px) {
+      display: none;
     }
+
+
+    
   }
 }
 
@@ -117,11 +139,34 @@ html, body {
 //Homepage
 .Home {
 
+  overflow-x: hidden;
+
   p {
     font-size: 1.3em;
     text-align: center;
     padding: 24px;
-    margin: 0;
+    margin: 10px;
+    position: relative;
+    bottom: 370px;
+    background-color: $txtBg;
+
+    @include mQ(600px) {
+      font-size: 2.4em;
+      bottom: 470px;
+    }
+
+    @include mQ(1000px) {
+      @include resize(p);
+      padding: 50px 0;
+    }
+  }
+
+  img {
+    width: auto;
+
+    @include mQ(1000px) {
+      @include resize(img);
+    }
   }
 
 }
@@ -136,6 +181,10 @@ html, body {
 
   img {
     margin-bottom: 20px;
+
+    @include mQ(1000px) {
+      @include resize(img);
+    }
   }
 }
 
@@ -173,7 +222,6 @@ html, body {
     #sass {
       color: $sass;
     }
-
   }
 }
 
@@ -203,6 +251,15 @@ html, body {
 }
 
 
+//Social Media icons 
+.twitter {
+  color: $twitter;  
+}
+ .github {
+  color: $github;
+}
+
+
 .Contact {
 
   padding-left: 8px;
@@ -216,7 +273,7 @@ html, body {
   dd {
     margin-left: 0;
     margin-bottom: 30px;
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .SocialMedia {
@@ -230,17 +287,9 @@ html, body {
     li {
       display: inline-block;
     }
-
   }
-
 }
 
-.twitter {
-  color: $twitter;  
-}
- .github {
-  color: $github;
-}
 
 //Foot
 .Foot {
@@ -254,13 +303,21 @@ html, body {
     margin-left: 4px;
     color: $white;
     margin-top: 10px;
+    
+    @include mQ(600px) {
+      margin-right: 350px;
+    }
   }
 
   .SocialMedia {
     display: inline-block;
     margin-left: 16px;
     font-size: 22px;   
-    margin-top: 10px; 
+    margin-top: 10px;
+
+    @include mQ(600px) {
+
+    } 
 
     ul {
       margin: 0;

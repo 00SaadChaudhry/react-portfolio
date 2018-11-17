@@ -1,0 +1,13 @@
+//media query
+@mixin mQ($arg) {
+  @media screen and (min-width: $arg) {
+    @content;
+  }
+}
+
+//image resize
+@mixin resize($arg) {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
