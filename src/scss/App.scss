@@ -62,6 +62,10 @@ p, a, dd, dt {
   padding-bottom: 10px;
   padding-top: 10px;
 
+  @include mQ(1000px) {
+    margin-bottom: 20px;
+  }
+
   .Logo {
     display: inline-block;
     margin-left: 10px;
@@ -72,6 +76,11 @@ p, a, dd, dt {
 
     @include mQ(700px) {
       margin-right: 80px;
+    }
+
+    @include mQ(1000px) {
+      margin-right: 200px;
+      margin-left: 140px;
     }
 
     h1 {
@@ -128,10 +137,7 @@ p, a, dd, dt {
 
     @include mQ(600px) {
       display: none;
-    }
-
-
-    
+    }    
   }
 }
 
@@ -159,14 +165,34 @@ p, a, dd, dt {
       @include resize(p);
       padding: 50px 0;
     }
+
+    @include mQ(1600px) {
+      width: 60%;
+    }
+
+    @include mQ(2000px) {
+      width: 45%;
+    }
+
+    @include mQ(2500px) {
+      width: 35%;
+    }
   }
 
   img {
     width: auto;
 
-    @include mQ(1000px) {
-      @include resize(img);
+    @include mQ(1100px) {
+      display: block;
+      width: auto;
+      height: 700px;
+      margin: 0 auto;
     }
+  }
+
+  @include mQ(1000px) {
+    margin-right: 200px;
+    margin-left: 140px;
   }
 
 }
@@ -177,6 +203,11 @@ p, a, dd, dt {
 
   p {
     padding: 0 10px;
+
+    @include mQ(1000px) {
+      @include resize(p);
+      margin-bottom: 30px;
+    }
   }
 
   img {
@@ -191,6 +222,12 @@ p, a, dd, dt {
 
 //Skills
 .Skills {
+
+  @include mQ(1000px) {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
   
   margin-top: 50px;
 
@@ -222,11 +259,43 @@ p, a, dd, dt {
     #sass {
       color: $sass;
     }
+
+    @include mQ(1000px) {
+      display: inline-block;
+      width: 33%;
+      box-sizing: border-box;
+
+      h1 {
+        font-size: 40px;
+        display: block;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .icon {
+        font-size: 100px;
+        margin-left: 0;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
   }
 }
 
 
 .Development {
+
+  @include mQ(1000px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include mQ(1400px) {
+    width: 60%;
+  }
 
   margin-top: 10px;
 
@@ -248,6 +317,30 @@ p, a, dd, dt {
     padding: 4px 8px;
     border-radius: 5px;
   }
+
+  @include mQ(1000px) {  
+    .Image {
+      // margin-left: 10%;
+      width: 500px;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+  }
+
+  .Description {
+    @include mQ(1000px) {
+      display: inline-block;
+      width: 35%;
+      box-sizing: border-box;
+      position: relative;
+      bottom: 60px;
+
+      li {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
 }
 
 
@@ -261,6 +354,10 @@ p, a, dd, dt {
 
 
 .Contact {
+
+  @include mQ(1000px) {
+    text-align: center;
+  }
 
   padding-left: 8px;
   
@@ -287,6 +384,10 @@ p, a, dd, dt {
     li {
       display: inline-block;
     }
+
+    @include mQ(1000px) {
+      margin-top: 140px;
+    }
   }
 }
 
@@ -305,7 +406,15 @@ p, a, dd, dt {
     margin-top: 10px;
     
     @include mQ(600px) {
-      margin-right: 350px;
+      margin-right: 290px;
+    }
+
+    @include mQ(800px) {
+      margin-right: 490px;
+    }
+
+    @include mQ(1000px) {
+      margin-right: 700px;
     }
   }
 
