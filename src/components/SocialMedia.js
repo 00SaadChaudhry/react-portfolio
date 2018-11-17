@@ -23,7 +23,7 @@ function SocialMedia(props) {
       <li key={item.icon}>
         <a href={item.link} target="_blank"
         rel="noopener noreferrer">
-          <FontAwesomeIcon icon={['fab', item.icon]} />
+          <FontAwesomeIcon icon={['fab', item.icon]} id={item.icon} />
         </a>
       </li>
     )
