@@ -24,11 +24,14 @@ button {
   border: none;
 }
 
+p, h1, dd, dt {
+  color: $black;
+}
+
 a {
   text-decoration: none;
   color: #000;
 }
-
 
 p, a {
   font-family: 'Open Sans', sans-serif;
@@ -38,15 +41,12 @@ html, body {
   height: 100%;
 }
 
-.App {
-  background-color: $app;
-}
-
 
 //keep footer on bottom
 #root {
   min-height: 100%;
   position: relative;
+  background-color: $app;
 }
 
 .Home, .AboutMe, .Skills, .Development, .Contact {
@@ -71,7 +71,7 @@ html, body {
 
   .Logo {
     display: inline-block;
-    margin-right: 170px;
+    // margin-right: 50%;
     margin-left: 10px;
 
     h1 {
@@ -79,17 +79,23 @@ html, body {
       letter-spacing: 1.5px;
       font-size: 1.3em;
       font-family: Arimo, sans-serif;
+      color: $white;
     }
   }
 
   button {
     padding: 6px 12px;
     background-color: $darkGray;
+    float: right;
     
     .menu {
       font-size: 1.6em;
       color: $white;
     }
+  }
+
+  nav {
+    clear: both;
   }
 
   .nav-closed {
@@ -111,13 +117,11 @@ html, body {
 //Homepage
 .Home {
 
-
   p {
-    color: #fff;
     font-size: 1.3em;
     text-align: center;
-    margin: 0 20px;
-    padding: 10px;
+    padding: 24px;
+    margin: 0;
   }
 
 }
@@ -129,23 +133,33 @@ html, body {
   p {
     padding: 0 10px;
   }
+
+  img {
+    margin-bottom: 20px;
+  }
 }
 
 
 //Skills
 .Skills {
   
+  margin-top: 50px;
+
   .Skill {
 
     text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+      margin-left: -70px;
+    }
 
     .icon {
       font-size: 2em;
-    }
-
-    p {
-      text-align: left;
-      padding: 0 1em;
+      margin-top: 6px;
+      margin-left: 50px;
     }
 
     #js {
@@ -165,6 +179,14 @@ html, body {
 
 
 .Development {
+
+  margin-top: 10px;
+
+  img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
   
   h1, p, ul {
     padding: 0 8px;
@@ -173,8 +195,8 @@ html, body {
   li {
     display: inline-block;
     margin-right: 0.5em;
-    background-color: #000;
-    color: #fff;
+    background-color: $medGray;
+    color: $white;
     padding: 4px 8px;
     border-radius: 5px;
   }
@@ -186,45 +208,59 @@ html, body {
   padding-left: 8px;
   
   dt {
-    float: left;
     margin-right: 15px;
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-bottom: 30px;
+    font-size: 22px;
   }
 
   .SocialMedia {
-    clear: both;
+    font-size: 7em;
+
+    ul {
+      text-align: center;
+      margin: 10px;
+    }
+
+    li {
+      display: inline-block;
+    }
+
   }
 
 }
 
+.twitter {
+  color: $twitter;  
+}
+ .github {
+  color: $github;
+}
 
 //Foot
 .Foot {
 
   background-color: $darkGray;
   color: $white;
-  padding-top: 10px;
 
   p {
     display: inline-block;
     font-size: 12px;
     margin-left: 4px;
+    color: $white;
+    margin-top: 10px;
   }
 
   .SocialMedia {
     display: inline-block;
     margin-left: 16px;
-    font-size: 22px;
-    
-    
-
-    #twitter {
-      color: $twitter;  
-    }
-
-    #github {
-      color: $github;
-
-    }
+    font-size: 22px;   
+    margin-top: 10px; 
 
     ul {
       margin: 0;
