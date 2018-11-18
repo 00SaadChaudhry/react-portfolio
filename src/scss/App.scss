@@ -32,22 +32,8 @@ p, h1, dd, dt, a {
 }
 
 
-//keep footer on bottom
-#root {
-  min-height: 100%;
-  position: relative;
+.App {
   background-color: $app;
-}
-
-.Home, .AboutMe, .Skills, .Development, .Contact {
-  padding-bottom: 50px;
-}
-
-.Foot {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
 }
 
 
@@ -157,16 +143,18 @@ p, h1, dd, dt, a {
 
 //Homepage
 .Home {
-  overflow-x: hidden;
+  position: relative;
 
   p {
-    font-size: 1.3em;
-    text-align: center;
-    padding: 24px;
-    margin: 10px;
-    position: relative;
-    bottom: 370px;
+    font-size: 1.9em;
+    padding: 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: $home;
+    letter-spacing: 2px;
 
     @include mQ(1200px) {
       bottom: 1070px;
@@ -176,18 +164,19 @@ p, h1, dd, dt, a {
   }
 
   img {
-    width: auto;
+    // width: auto;
   }
 }
 
 
 //About Me
 .AboutMe {
-
   position: relative;
+  background-color: $appContrast;
 
   p {
     padding: 0 10px;
+    margin-top: 0;
 
     @include mQ(900px) {
       margin-bottom: 50px;
@@ -250,6 +239,7 @@ p, h1, dd, dt, a {
 .Development {
   margin-top: 10px;
   position: relative;
+  background-color: $appContrast;
 
   img {
     display: block;
@@ -372,7 +362,7 @@ p, h1, dd, dt, a {
 }
 
 //General Content Sizes
-.Home, .AboutMe, .Skills, .Development, .Contact {
+.Home > div, .AboutMe > div, .Skills > div, .Development > div, .Contact > div {
   @include mQ(900px) {
     @include align(80%, 35px);
   }

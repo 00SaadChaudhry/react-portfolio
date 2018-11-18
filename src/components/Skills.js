@@ -32,8 +32,10 @@ function Skills() {
   })
 
   return (
-   <div className="Skills">
-    {showSkills}
+   <div className="Skills" id="skills">
+    <div>  
+      {showSkills}
+    </div>
    </div>
   )
 }

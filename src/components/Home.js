@@ -8,13 +8,13 @@ import homeLg from '../images/home_large.jpg';
 
 function Home() {
   return (
-   <div className="Home">
-    <Image lgImg={homeLg} mdImg={homeMd} smImg={homeSm} alt="workbench" />
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida, 
-      ex ac fringilla pellentesque, orci dui pharetra tellus, 
-      ac blandit ipsum felis ac nulla.
-    </p>
+   <div className="Home" id="home">
+    <div>
+      <Image lgImg={homeLg} mdImg={homeMd} smImg={homeSm} alt="workbench" />
+      <p>
+        00Saad
+      </p>
+    </div>
    </div>
   )
 }

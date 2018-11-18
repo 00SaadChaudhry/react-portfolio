@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {HashRouter, Route} from 'react-router-dom';
 
 import './scss/App.scss';
 
@@ -14,27 +14,27 @@ import Contact from './components/Contact';
 
 export const links = [
   {
-    path: '/',
+    path: '#home',
     component: Home,
     name: 'Home'
   },
   {
-    path: '/aboutme',
+    path: '#aboutme',
     component: AboutMe,
     name: 'About Me'
   },
   {
-    path: '/skills',
+    path: '#skills',
     component: Skills,
     name: 'Skills'
   },
   {
-    path: '/development',
+    path: '#development',
     component: Development,
     name: 'Development'
   },
   {
-    path: '/contact',
+    path: '#contact',
     component: Contact,
     name: 'Contact'
   }
@@ -43,7 +43,7 @@ export const links = [
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <Head />
           {
@@ -54,9 +54,14 @@ class App extends Component {
               )
             })
           }
+          <Home />
+          <AboutMe />
+          <Skills />
+          <Development />
+          <Contact />
           <Foot />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
