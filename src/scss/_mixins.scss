@@ -37,3 +37,9 @@
   width: $wd;
   display: inline;
 }
+
+@mixin condense() {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+}

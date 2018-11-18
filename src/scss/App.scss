@@ -184,17 +184,37 @@ p, h1, dd, dt, a {
 //About Me
 .AboutMe {
 
+  position: relative;
+
   p {
     padding: 0 10px;
 
     @include mQ(900px) {
       margin-bottom: 50px;
+      @include condense();
+      padding-right: 30px;
+      // position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
-  img {
-    margin-bottom: 20px;
+  .Image {
+    
+    img {
+      margin-bottom: 20px;
+
+      @include mQ(900px) {
+        border-radius: 5px;
+      }
+    }
+
+    @include mQ(900px) {
+      @include condense();
+    }
   }
+
+  
 }
 
 
@@ -236,6 +256,7 @@ p, h1, dd, dt, a {
     @include align();
     @include mQ(900px) {
       @include imgResize();
+      border-radius: 5px;
     }
   }
 
@@ -367,6 +388,6 @@ p, h1, dd, dt, a {
   }
 
   @include mQ(900px) {
-    @include align(60%);
+    @include align(70%);
   }
 }
