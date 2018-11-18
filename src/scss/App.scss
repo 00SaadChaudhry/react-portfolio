@@ -140,7 +140,6 @@ p, h1, dd, dt, a {
     display: block;
     padding-left: 0;
     text-align: center;
-    transition: transform 500ms ease-in-out;
 
     @include mQ(600px) {
       text-align: left;
