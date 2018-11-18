@@ -31,7 +31,6 @@ p, h1, dd, dt, a {
   font-family: 'Open Sans', sans-serif;
 }
 
-
 .App {
   background-color: $app;
 }
@@ -163,8 +162,8 @@ p, h1, dd, dt, a {
     }
   }
 
-  img {
-    // width: auto;
+  .Image {
+    margin-bottom: 2em;
   }
 }
 
@@ -175,7 +174,7 @@ p, h1, dd, dt, a {
   background-color: $appContrast;
 
   p {
-    padding: 0 10px;
+    padding: 10px 10px 0 10px;
     margin-top: 0;
 
     @include mQ(900px) {
