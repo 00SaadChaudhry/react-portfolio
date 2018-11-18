@@ -5,9 +5,10 @@
   }
 }
 
-@mixin align($wd: 90%) {
+@mixin align($wd: 90%, $mt: 0) {
   width: $wd;
   margin: 0 auto;
+  margin-top: $mt;
   box-sizing: border-box;
 }
 
@@ -30,4 +31,9 @@
     li {
       @include navLi();
     } 
+}
+
+@mixin imgResize($wd: 57%) {
+  width: $wd;
+  display: inline;
 }

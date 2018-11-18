@@ -75,16 +75,6 @@ p, h1, dd, dt, a {
   background-color: $darkGray;
   padding: 10px 0;
 
-  div {
-    @include mQ(600px) {
-      @include align(90%);
-    }
-
-    @include mQ(900px) {
-      @include align(60%);
-    }
-  }
-
   .Logo {
     display: inline-block;
     margin-left: 10px;
@@ -137,7 +127,7 @@ p, h1, dd, dt, a {
     li {
 
       @include mQ(900px) {
-        @include navLi(25px);
+        @include navLi(15px);
       }
 
       @include mQ(1300px) {
@@ -150,6 +140,7 @@ p, h1, dd, dt, a {
     display: block;
     padding-left: 0;
     text-align: center;
+    transition: transform 500ms ease-in-out;
 
     @include mQ(600px) {
       text-align: left;
@@ -177,6 +168,12 @@ p, h1, dd, dt, a {
     position: relative;
     bottom: 370px;
     background-color: $home;
+
+    @include mQ(1200px) {
+      bottom: 1070px;
+      font-size: 3em;
+      @include align(80%);
+    }
   }
 
   img {
@@ -187,8 +184,13 @@ p, h1, dd, dt, a {
 
 //About Me
 .AboutMe {
+
   p {
     padding: 0 10px;
+
+    @include mQ(900px) {
+      margin-bottom: 50px;
+    }
   }
 
   img {
@@ -204,6 +206,12 @@ p, h1, dd, dt, a {
   .Skill {
     text-align: center;
     margin-bottom: 50px;
+
+    @include mQ(900px) {
+      display: inline-block;
+      @include align(33%, 50px);
+      padding: 0 40px;
+    }
 
     h1 {
       display: inline-block;
@@ -222,14 +230,35 @@ p, h1, dd, dt, a {
 
 .Development {
   margin-top: 10px;
+  position: relative;
 
   img {
     display: block;
     @include align();
+    @include mQ(900px) {
+      @include imgResize();
+    }
+  }
+
+  .Image {
+    @include mQ(900px) {
+      @include imgResize();
+    }
   }
 
   .Description {
     @include align();
+
+    @include mQ(900px) {
+      display: inline-block;
+      margin-right: 0;
+      width: calc(43% - 50px);
+      margin-left: 50px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   
   h1, p, ul {
@@ -250,6 +279,10 @@ p, h1, dd, dt, a {
 
 .Contact {
   padding-left: 8px;
+
+  @include mQ(600px) {
+    text-align: center;
+  }
   
   dt {
     margin-right: 15px;
@@ -264,6 +297,10 @@ p, h1, dd, dt, a {
   .SocialMedia {
     font-size: 7em;
 
+    @include mQ(600px) {
+      font-size: 10em;
+    }
+
     ul {
       text-align: center;
       margin: 10px;
@@ -271,6 +308,10 @@ p, h1, dd, dt, a {
 
     li {
       display: inline-block;
+
+      @include mQ(600px) {
+        display: block;
+      }
     }
   }
 }
@@ -307,5 +348,26 @@ p, h1, dd, dt, a {
         display: inline;
       }
     }
+  }
+}
+
+//General Content Sizes
+.Home, .AboutMe, .Skills, .Development, .Contact {
+  @include mQ(900px) {
+    @include align(80%, 35px);
+  }
+
+  @include mQ(1200px) {
+    @include align(70%, 55px);
+  }
+}
+
+.Head > div, .Foot > div {
+  @include mQ(600px) {
+    @include align(90%);
+  }
+
+  @include mQ(900px) {
+    @include align(60%);
   }
 }
