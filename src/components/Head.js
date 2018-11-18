@@ -26,11 +26,13 @@ class Head extends Component {
 
     return (
       <header className="Head">
-        <Logo />
-        <button onClick={this.handleClick.bind(this)}>
-          <FontAwesomeIcon icon={faBars} className="menu" />
-        </button>
-        <Nav className={toggle ? 'nav-closed' : 'nav-open'} />
+        <div>
+          <Logo />
+          <button onClick={this.handleClick.bind(this)}>
+            <FontAwesomeIcon icon={faBars} className="menu" />
+          </button>
+          <Nav className={toggle ? 'nav-closed' : 'nav-open'} />
+        </div>
       </header>
     )
   }
