@@ -5,9 +5,29 @@
   }
 }
 
-//image resize
-@mixin resize($arg) {
-  display: block;
-  width: 80%;
+@mixin align($wd: 90%) {
+  width: $wd;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin desList($size, $mgn-btm) {
+  font-size: $size;
+  margin-bottom: $mgn-btm;
+}
+
+@mixin navLi($mr: 10px) {
+  display: inline-block;
+  position: relative;
+  left: 15%;
+  margin-right: $mr;
+}
+
+@mixin lgNav() {
+    display: inline-block;
+    @include align(80%);
+
+    li {
+      @include navLi();
+    } 
 }

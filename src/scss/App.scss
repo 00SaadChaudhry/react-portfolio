@@ -26,11 +26,8 @@ img {
   width: 100%;
 }
 
-p, h1, dd, dt {
+p, h1, dd, dt, a {
   color: $black;
-}
-
-p, a, dd, dt {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -54,21 +51,50 @@ p, a, dd, dt {
 }
 
 
+//Social Media icons 
+.twitter {
+  color: $twitter;  
+}
+ .github {
+  color: $github;
+}
+ #js {
+  color: $javascript;
+}
+#react {
+  color: $react;
+}
+
+#sass {
+  color: $sass;
+}
+
+
 //top of page and navigation
 .Head {
-
   background-color: $darkGray;
-  color: $white;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px 0;
+
+  div {
+    @include mQ(600px) {
+      @include align(90%);
+    }
+
+    @include mQ(900px) {
+      @include align(60%);
+    }
+  }
 
   .Logo {
     display: inline-block;
     margin-left: 10px;
 
+    @include mQ(600px) {
+      @include align(20%);
+    }
+
     h1 {
-      margin-bottom: 0;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       font-size: 1.3em;
       font-family: Arimo, sans-serif;
       color: $white;
@@ -77,7 +103,7 @@ p, a, dd, dt {
 
   button {
     border: none;
-    padding: 6px 12px;
+    padding: 12px;
     background-color: $darkGray;
     float: right;
 
@@ -93,22 +119,30 @@ p, a, dd, dt {
 
   nav {
     clear: both;
-
-    @include mQ(600px) {
-      width: 80%;
-    }
   }
 
   a {
-    color: $headTxt;
+    color: $white;
     text-decoration: none;
   }
 
   .nav-closed {
     display: none;
+    padding-left: 0;
     
     @include mQ(600px) {
-      display: inline-block;
+      @include lgNav();
+    }
+
+    li {
+
+      @include mQ(900px) {
+        @include navLi(25px);
+      }
+
+      @include mQ(1300px) {
+        @include navLi(35px);
+      }
     }
   }
   
@@ -118,7 +152,14 @@ p, a, dd, dt {
     text-align: center;
 
     @include mQ(600px) {
-      display: none;
+      text-align: left;
+      @include lgNav();
+    }
+
+    li {
+      @include mQ(900px) {
+        @include navLi(25px);
+      }
     }    
   }
 }
@@ -126,7 +167,6 @@ p, a, dd, dt {
 
 //Homepage
 .Home {
-
   overflow-x: hidden;
 
   p {
@@ -136,7 +176,7 @@ p, a, dd, dt {
     margin: 10px;
     position: relative;
     bottom: 370px;
-    background-color: $txtBg;
+    background-color: $home;
   }
 
   img {
@@ -147,7 +187,6 @@ p, a, dd, dt {
 
 //About Me
 .AboutMe {
-
   p {
     padding: 0 10px;
   }
@@ -160,11 +199,9 @@ p, a, dd, dt {
 
 //Skills
 .Skills {
-  
   margin-top: 50px;
 
   .Skill {
-
     text-align: center;
     margin-bottom: 50px;
 
@@ -179,30 +216,20 @@ p, a, dd, dt {
       margin-top: 6px;
       margin-left: 50px;
     }
-
-    #js {
-      color: $javascript;
-    }
-
-    #react {
-      color: $react;
-    }
-
-    #sass {
-      color: $sass;
-    }
   }
 }
 
 
 .Development {
-
   margin-top: 10px;
 
   img {
-    width: 90%;
     display: block;
-    margin: 0 auto;
+    @include align();
+  }
+
+  .Description {
+    @include align();
   }
   
   h1, p, ul {
@@ -211,38 +238,27 @@ p, a, dd, dt {
 
   li {
     display: inline-block;
-    margin-right: 0.5em;
-    background-color: $medGray;
-    color: $white;
     padding: 4px 8px;
     border-radius: 5px;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    background-color: $medGray;
+    color: $white;
   }
-}
-
-
-//Social Media icons 
-.twitter {
-  color: $twitter;  
-}
- .github {
-  color: $github;
 }
 
 
 .Contact {
-
   padding-left: 8px;
   
   dt {
     margin-right: 15px;
-    font-size: 28px;
-    margin-bottom: 5px;
+    @include desList(28px, 5px);
   }
 
   dd {
     margin-left: 0;
-    margin-bottom: 30px;
-    font-size: 18px;
+    @include desList(18px, 30px);
   }
 
   .SocialMedia {
@@ -262,22 +278,21 @@ p, a, dd, dt {
 
 //Foot
 .Foot {
-
   background-color: $darkGray;
   color: $white;
 
   p {
     display: inline-block;
-    font-size: 12px;
-    margin-left: 4px;
-    color: $white;
     margin-top: 10px;
+    margin-left: 4px;
+    font-size: 12px;
+    color: $white;
   }
 
   .SocialMedia {
     display: inline-block;
-    font-size: 22px;   
     margin-top: 10px;
+    font-size: 22px;   
     float: right;
     padding-right: 10px;
 
