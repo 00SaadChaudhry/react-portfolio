@@ -11,6 +11,7 @@ import AboutMe from './components/AboutMe';
 import Development from './components/Development';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import TopBtn from './components/TopBtn';
 
 export const links = [
   {
@@ -55,6 +56,7 @@ class App extends Component {
             })
           }
           <Home />
+          <TopBtn />
           <AboutMe />
           <Skills />
           <Development />

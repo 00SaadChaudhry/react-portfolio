@@ -19,7 +19,7 @@ function Nav(props) {
   });
 
   return (
-    <nav className={props.className}>
+    <nav className={props.className} id="nav">
       <ul>
         {navLinks}
       </ul>
