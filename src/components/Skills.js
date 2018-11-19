@@ -1,5 +1,6 @@
 import React from 'react';
 
+//individual skill component
 import Skill from './Skill';
 
 //FontAwesome icons
