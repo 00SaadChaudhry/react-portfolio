@@ -1,17 +1,20 @@
+//node packages
 import React, { Component } from 'react';
 import {HashRouter, Route} from 'react-router-dom';
 
+//styling
 import './scss/App.scss';
 
 import Head from './components/Head';
 import Foot from './components/Foot';
+import TopBtn from './components/TopBtn';
 
+//main content
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
 import Development from './components/Development';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import TopBtn from './components/TopBtn';
 
 export const links = [
   {

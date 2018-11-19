@@ -1,15 +1,22 @@
 import React from 'react';
-
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCaretSquareUp} from '@fortawesome/free-solid-svg-icons';
-library.add(faCaretSquareUp);
+import {CircleArrow as ScrollUpButton} from "react-scroll-up-button"; 
 
 function TopBtn() {
-  return(
-    <button className="TopBtn">
-      <FontAwesomeIcon icon={faCaretSquareUp} className="menu" />
-    </button>
+
+  const invisible = 'rgba(255, 255, 255, 0)';
+  const color = 'gray'
+
+  return (
+    <ScrollUpButton 
+      //inline style because default style not being overridden
+      style={
+        {
+          backgroundColor: invisible,
+          fill: color,
+          borderColor: color
+        }
+      }
+    />
   )
 }
 
