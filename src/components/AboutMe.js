@@ -17,8 +17,6 @@ function AboutMe() {
         Etiam cursus dapibus convallis. Vivamus a augue dui. 
         Maecenas condimentum interdum sem ac consectetur. Vestibulum dolor nisl,
         consequat et sollicitudin sit amet, pretium in eros. 
-        Fusce non urna et ante dictum egestas. Mauris vulputate placerat leo,
-         id finibus ligula tincidunt ut.
       </p>
       <Image lgImg={aboutLg} mdImg={aboutMd} smImg={aboutSm} alt="landscape" />
       </div>
