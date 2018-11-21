@@ -9,6 +9,8 @@ function Contact() {
         <dd>Saad Chaudhry</dd>
         <dt>Email:</dt>
         <dd>00saadchaudhry@gmail.com</dd>
+        <dt>Location:</dt>
+        <dd>Jersey City, NJ</dd>
       </dl>
     </div>
    </div>

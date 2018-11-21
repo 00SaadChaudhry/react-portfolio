@@ -15,7 +15,8 @@ function TopBtn() {
         {
           backgroundColor: invisible,
           fill: color,
-          borderColor: color
+          borderColor: color,
+          zIndex: 1
         }
       }
     />

@@ -14,9 +14,9 @@ function Development() {
    <div className="Development" id="development">
    <div>  
      <Image lgImg={designLg} mdImg={designMd} smImg={designSm} alt="html code" />
-     <Description heading="Portfolio" list={0}
-       text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-      />
+     <Description heading="Portfolio" list={0}>
+      
+     </Description>
    </div>
    </div>
   )

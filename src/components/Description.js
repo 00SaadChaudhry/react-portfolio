@@ -15,7 +15,7 @@ function Description(props) {
       <ul>
         {techs[props.list].map(item => <li key={item}>{item}</li>)}
       </ul>
-      <p>{props.text}</p>
+      <p>{props.children}</p>
     </div>
   )
 }

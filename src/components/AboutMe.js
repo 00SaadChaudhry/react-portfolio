@@ -11,12 +11,18 @@ function AboutMe() {
    <div className="AboutMe" id="aboutme">
     <div>  
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Vivamus gravida, ex ac fringilla pellentesque, orci dui pharetra tellus, 
-        ac blandit ipsum felis ac nulla. Aenean scelerisque varius est. 
-        Etiam cursus dapibus convallis. Vivamus a augue dui. 
-        Maecenas condimentum interdum sem ac consectetur. Vestibulum dolor nisl,
-        consequat et sollicitudin sit amet, pretium in eros. 
+        While there's a 00 in front of my name, 
+        I'm not a secret-agent, just a React Developer (play the theme).
+        <br /> 
+        <br /> 
+
+        I love the existence of React, it makes building a project that much easier. 
+        As long as you understand HTML, CSS, and JavaScript (ES6+ especially), 
+        run the NPX command and get started. 
+        It's already taken care of the prep work: webpack is configured, 
+        the node packages are installed, and a local git repository is created. 
+        If you need greater functionality, 
+        you're likely to find a package you can import as a React component using JSX.
       </p>
       <Image lgImg={aboutLg} mdImg={aboutMd} smImg={aboutSm} alt="landscape" />
       </div>
