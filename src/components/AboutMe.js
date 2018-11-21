@@ -6,10 +6,11 @@ import aboutSm from '../images/about_small.jpg';
 import aboutMd from '../images/about_medium.jpg';
 import aboutLg from '../images/about_large.jpg';
 
-function AboutMe() {
+function AboutMe(props) {
   return (
    <div className="AboutMe" id="aboutme">
     <div>  
+      {props.header}
       <p>
         While there's a 00 in front of my name, 
         I'm not a secret-agent, just a React Developer (play the theme).
