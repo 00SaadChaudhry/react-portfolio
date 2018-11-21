@@ -286,13 +286,13 @@ p, h1, dd, dt, a {
     border-radius: 5px;
     @include align();
 
-    @include mQ(600px) {
+    @include mQ(900px) {
       @include imgResize();
     }
   }
 
   .Image {
-    @include mQ(600px) {
+    @include mQ(900px) {
       @include imgResize();
     }
   }
@@ -300,7 +300,7 @@ p, h1, dd, dt, a {
   .Description {
     @include align();
 
-    @include mQ(600px) {
+    @include mQ(900px) {
       display: inline-block;
       margin-right: 0;
       width: calc(43% - 50px);
@@ -314,6 +314,10 @@ p, h1, dd, dt, a {
   
   h1, p, ul {
     padding: 0 8px;
+  }
+
+  ul, p {
+    margin: 0;
   }
 
   li {

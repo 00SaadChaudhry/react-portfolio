@@ -15,7 +15,7 @@ function Development() {
    <div>  
      <Image lgImg={designLg} mdImg={designMd} smImg={designSm} alt="html code" />
      <Description heading="Portfolio" list={0}>
-      
+      I'm using react packages for smooth-scroll, scroll-to-top-button, and font-awesome-icons. React-router-dom with HashRouter is used for internal hash links. My styling is done with SCSS. 
      </Description>
    </div>
    </div>
