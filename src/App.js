@@ -48,8 +48,6 @@ export const links = [
 class App extends Component {
   render() {
 
-    var customHeader = <h1>Here's a custom component</h1>
-
     return (
       <HashRouter>
         <div className="App">
@@ -64,7 +62,7 @@ class App extends Component {
           }
           <Home />
           <TopBtn />
-          <AboutMe header={customHeader} />
+          <AboutMe />
           <Skills />
           <Development />
           <Contact />
