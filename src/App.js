@@ -48,6 +48,10 @@ export const links = [
 class App extends Component {
   render() {
 
+    function makeHdr(title) {
+      return <h1>{title}</h1>
+    }
+
     return (
       <HashRouter>
         <div className="App">
@@ -62,8 +66,8 @@ class App extends Component {
           }
           <Home />
           <TopBtn />
-          <AboutMe />
-          <Skills />
+          <AboutMe header={makeHdr('About Me')}/>
+          <Skills  header={makeHdr('Skills')}/>
           <Development />
           <Contact />
           <Foot />

@@ -26,7 +26,7 @@ const skillsArr = [
   },
 ];
 
-function Skills() {
+function Skills(props) {
   const showSkills = skillsArr.map(item => {
     return <Skill heading={item.heading} icon={['fab', item.icon]} 
       text={item.text} key={item.icon} id={item.icon} />
@@ -34,6 +34,7 @@ function Skills() {
 
   return (
    <div className="Skills" id="skills">
+    {props.header}
     <div>  
       {showSkills}
     </div>
