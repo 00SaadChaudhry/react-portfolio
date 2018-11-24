@@ -9,8 +9,8 @@ import aboutLg from '../images/about_large.jpg';
 function AboutMe(props) {
   return (
    <div className="AboutMe" id="aboutme">
+    {props.header}
     <div>  
-      {props.header}
       <p>
         While there's a 00 in front of my name, 
         I'm not a secret-agent, just a React Developer (play the theme).

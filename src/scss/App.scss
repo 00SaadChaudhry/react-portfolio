@@ -223,6 +223,10 @@ h1 {
       margin-bottom: 20px;
 
       @include mQ(600px) {
+        margin-bottom: 60px;
+      }
+
+      @include mQ(1500px) {
         margin-bottom: 0;
       }
     }
@@ -421,4 +425,8 @@ h1 {
   @include mQ(900px) {
     margin-top: 0;
   }
+}
+
+.AboutMe > h1, .Skills > h1, .Development > h1, .Contact > h1 {
+  text-decoration: underline;
 }
