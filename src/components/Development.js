@@ -9,9 +9,10 @@ import designMd from '../images/design_medium.jpg';
 import designLg from '../images/design_large.jpg';
 
 
-function Development() {
+function Development(props) {
   return (
    <div className="Development" id="development">
+   {props.header}
    <div>  
      <Image lgImg={designLg} mdImg={designMd} smImg={designSm} alt="html code" />
      <Description heading="Portfolio" list={0}>

@@ -26,9 +26,14 @@ img {
   width: 100%;
 }
 
-p, h1, dd, dt, a {
+p, h1, dd, dt, a, h2 {
   color: $black;
   font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arimo, sans-serif;
 }
 
 .App {
@@ -251,7 +256,7 @@ p, h1, dd, dt, a {
       margin-top: 0;
     }
 
-    h1 {
+    h2 {
       display: inline-block;
       margin: 0;
       margin-left: -70px;
@@ -312,7 +317,7 @@ p, h1, dd, dt, a {
     }
   }
   
-  h1, p, ul {
+  h2, p, ul {
     padding: 0 8px;
   }
 

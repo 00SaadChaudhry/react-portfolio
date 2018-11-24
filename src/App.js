@@ -67,9 +67,9 @@ class App extends Component {
           <Home />
           <TopBtn />
           <AboutMe header={makeHdr('About Me')}/>
-          <Skills  header={makeHdr('Skills')}/>
-          <Development />
-          <Contact />
+          <Skills header={makeHdr('Skills')}/>
+          <Development header={makeHdr('Development')} />
+          <Contact header={makeHdr('Contact')} />
           <Foot />
         </div>
       </HashRouter>

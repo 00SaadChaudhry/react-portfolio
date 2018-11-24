@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Contact() {
+function Contact(props) {
   return (
    <div className="Contact" id="contact">
+    {props.header}
     <div>  
       <dl>
         <dt>Name: </dt>

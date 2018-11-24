@@ -11,7 +11,7 @@ const techs = [
 function Description(props) {
   return(
     <div className="Description">
-      <h1>{props.heading}</h1>
+      <h2>{props.heading}</h2>
       <ul>
         {techs[props.list].map(item => <li key={item}>{item}</li>)}
       </ul>
